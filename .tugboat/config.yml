@@ -44,8 +44,8 @@ services:
         chmod 2775 /opt/drupal/web/sites/default/files
         chmod -R g+w /opt/drupal/web/sites/default/files
 
-        # Update ownership of keys directory.
-        chown -R www-data:www-data /opt/drupal/keys
+        # Create keys directory.
+        mkdir /opt/drupal/keys
 
         # Download and import farmOS translations.
         for locale in de es it nl
